@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 
+# dependencies
+/node_modules
+
 # IDEs and editors
 /.idea
 .project
@@ -21,11 +24,18 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# Cake Build
-tools
-build/tools
-build/v1/tools
-output
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
 
 # System Files
 .DS_Store

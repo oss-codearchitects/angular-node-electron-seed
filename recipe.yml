@@ -1,0 +1,75 @@
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+# cake build version
+version: 1
+# name
+name: angular-node-electron-seed
+# environment variables
+environment:
+  CAKE_BUILD_VERSION: 001
+#---------------------------------#
+#      build configuration        #
+#---------------------------------#
+build:
+  dist: dist
+  release_notes: RELEASE_NOTES.md
+#---------------------------------#
+#    components configuration     #
+#---------------------------------#
+components:
+  - name: server-component
+    path: server
+    build:
+      type: npm
+      dist: dist
+  - name: client-component
+    path: client
+    build:
+      type: npm
+      dist: dist
+#---------------------------------#
+#     bundlers configuration      #
+#---------------------------------#
+bundlers:
+  - name: electron-bundler
+    steps:
+      - import: ./recipe-steps-electron.yml
+  - name: webapp-bundler
+    steps:
+      - operation: copy
+        from:
+          component: server-component
+          context: component
+          path: node_modules
+        to:
+          path: node_modules
+      - operation: copy
+        from:
+          component: server-component
+          context: dist
+          path:
+        to:
+          path:
+      - operation: copy
+        from:
+          component: client-component
+          context: dist
+          path:
+          extensions: /**.js/**
+        to:
+          path: src\public\js
+#---------------------------------#
+#     artifacts configuration     #
+#---------------------------------#
+artifacts:
+  - name: app-nodejs
+    path: app-nodejs
+    bundler:
+      name: webapp-bundler
+      enable_compression: true
+  - name: app-electron
+    path: app-electron
+    bundle:
+      name: webapp-bundler
+      enable_compression: true

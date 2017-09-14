@@ -1,0 +1,24 @@
+name: electron-bundler-steps
+steps:
+  - operation: copy
+    from:
+      component: server-component
+      context: component
+      path: node_modules
+    to:
+      path: node_modules
+  - operation: copy
+    from:
+      component: server-component
+      context: dist
+      path:
+    to:
+      path:
+  - operation: copy
+    from:
+      component: client-component
+      context: dist
+      path:
+      extensions: /**.js/**
+    to:
+      path: src\public\js

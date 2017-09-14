@@ -1,0 +1,56 @@
+{
+  "name": "angular-node-electron-seed",
+  "version": "1.0.0",
+  "description": "Angular4 - NodeJS + Electron Seed",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "clean": "echo \"Error: clean not implemented yet\"",
+    "build": "webpack --config webpack-server.config",
+    "test": "echo \"Error: no test specified\"",
+    "watch": "webpack --config webpack-server.config --watch",
+    "start": "npm install && npm run build && concurrently \"npm run watch\" \"npm run debug\"",
+    "serve": "nodemon ./dist/lite-server-bundle.js",
+    "debug": "nodemon --inspect ./dist/lite-server-bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngallo/angular-node-electron-seed.git"
+  },
+  "author": "Nicola Gallo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ngallo/angular-node-electron-seed/issues"
+  },
+  "homepage": "https://github.com/ngallo/angular-node-electron-seed#readme",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "compression": "^1.7.0",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "errorhandler": "^1.5.0",
+    "express": "^4.15.4",
+    "morgan": "^1.8.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.16.5",
+    "@types/compression": "0.0.34",
+    "@types/dotenv": "^4.0.1",
+    "@types/errorhandler": "0.0.31",
+    "@types/express": "^4.0.37",
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.28",
+    "concurrently": "^3.5.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.7",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.12.0",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.6",
+    "typescript": "^2.5.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-middleware": "^1.12.0"
+  }
+}
