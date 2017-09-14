@@ -23,8 +23,8 @@
 
 # Cake Build
 tools
-build/tools
-build/v1/tools
+tools
+v1/tools
 output
 
 # System Files
