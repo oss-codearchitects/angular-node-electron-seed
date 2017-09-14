@@ -34,7 +34,7 @@ components:
 bundlers:
   - name: electron-bundler
     steps:
-      - import: ./recipe-steps-electron.yml
+      - import: ./recipe-steps.electron.yml
   - name: webapp-bundler
     steps:
       - operation: copy
