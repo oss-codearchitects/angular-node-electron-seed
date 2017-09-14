@@ -1,5 +1,5 @@
 # angular-node-electron-seed
-Angular4 - NodeJS + Electron Seed
+Angular4 - NodeJS + Electron Seed - using ca-bakery
 
 ToDo:
 
