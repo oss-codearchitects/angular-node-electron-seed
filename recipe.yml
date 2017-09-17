@@ -38,13 +38,6 @@ bundlers:
       - operation: copy
         from:
           component: server-component
-          context: component
-          path: node_modules
-        to:
-          path: node_modules
-      - operation: copy
-        from:
-          component: server-component
           context: dist
           path:
         to:
