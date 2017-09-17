@@ -5,10 +5,9 @@ ToDo:
 
 -[ ] Build
 
-    - [ ] Cleanup the cake script
     - [ ] Create multiple recipe steps files and amend the cake script (recipe-steps-electron.yml)
     - [ ] Implement logic to create the artifacts
-    - [ ] CI Integration (Appveyor, TFS)    
+    - [ ] CI Integration (Appveyor, TFS)
     - [ ] Bundle the release notes in each artifact
     - [ ] Integrate the electron bundler
     - [ ] Implement versioning of the files
