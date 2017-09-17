@@ -12,7 +12,7 @@ artifacts:
 notifications:
 - provider: Email
   to:
-  - opensource@codearchitects.com
+  - nicolagmt@hotmail.com
   subject: angular-node-electron-seed - appveyor
   on_build_success: false
   on_build_failure: true
