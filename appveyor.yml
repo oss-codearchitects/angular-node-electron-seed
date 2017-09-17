@@ -3,9 +3,9 @@ branches:
   only:
   - master
 environment:
-build: off
 build_script:
 - ps: ./build/v1/build-win.ps1 -Target "RC" -Script ".\build\v1\build.cake" -Recipe "recipe.yml" --settings_skipverification=true
+build: off
 artifacts:
 - path: ./dist/app-nodejs
   name: app-nodejs
