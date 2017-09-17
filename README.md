@@ -14,6 +14,7 @@ ToDo:
     - [ ] Test the build scripts on OSX
     - [ ] Create a new git repo for the build folder and integrate it using git subtree
     - [ ] Handle the target failures
+    - [ ] Implement support to NetCore and amend the build target
     - [ ] Implement support to deployment and services
     - [ ] CD Integration (TFS Release Management)
     - [ ] Write documentation
