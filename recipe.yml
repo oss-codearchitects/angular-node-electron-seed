@@ -33,9 +33,11 @@ components:
 #---------------------------------#
 bundlers:
   - name: electron-bundler
+    imports:
+      - ./recipe-steps.electron.yml
     steps:
-      - import: ./recipe-steps.electron.yml
   - name: webapp-bundler
+    imports:
     steps:
       - operation: copy
         from:
@@ -58,14 +60,14 @@ bundlers:
           path:
           extensions: /**.js/**
         to:
-          path: src\public\js
+          path: src/public/js
 #---------------------------------#
 #     artifacts configuration     #
 #---------------------------------#
 artifacts:
   - name: app-nodejs
     path: app-nodejs
-    bundler:
+    bundle:
       name: webapp-bundler
       enable_compression: true
   - name: app-electron
