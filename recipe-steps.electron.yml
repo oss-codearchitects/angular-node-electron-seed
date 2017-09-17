@@ -19,6 +19,6 @@ steps:
       component: client-component
       context: dist
       path:
-      extensions: /**.js/**
+      extensions: "*.js*"
     to:
       path: src\public\js
